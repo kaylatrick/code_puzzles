@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    var test = "cool";
+    console.log(test[0].toUpperCase());
+    console.log(test = test + test[0].toUpperCase());
+
+        function toTitleCase(x) {
+          var test = '';
+
+          for(var i = 0; i < x.length; i++) {
+            if (i === 0) {
+              var upper = x[i].toUpperCase();
+              test = test + upper;
+            } else if (x[(i-1)] === ' ') {
+              var upper2 = x[i].toUpperCase();
+              test = test + upper2;
+            }
+              else {
+                test = test + x[i];
+              }
+          }
+          return test;
+        };
+
+        console.log(toTitleCase("you like pizza."));
+
+    </script>
+  </body>
+</html>

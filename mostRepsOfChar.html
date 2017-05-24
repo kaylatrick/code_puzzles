@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+    var example = "kayla michelle";
+
+    function reps(str) {
+      var counts = {};
+      for(var i = 0; i <= str.length; i++) {
+          var ch = str[i];
+          if (ch in counts) {
+            counts[ch]++;
+          } else {
+            counts[ch] = 1;
+          }
+      }
+    var max = 0;
+    var maxChars = [];
+    for (var ch in counts) {
+      if (counts[ch] > max) {
+        max = counts[ch];
+        maxChars = [ch];}
+        else if (counts[ch] === max) {
+          maxChars.push(ch);
+        }
+      }
+      return {
+        chars: (maxChars.join('')),
+        count: max
+      };
+    }
+
+
+  console.log(reps(example));
+
+    </script>
+  </body>
+</html>

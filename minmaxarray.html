@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript" src="test.js">
+var array = [5, 4, 1, 7, 9, 2, 1, 9];
+
+function min(arg) {
+  var smallestIdx = 0;
+  var smallest = arg[0]
+  for(var i = 1; i < arg.length; i++) {
+    if (arg[i] < smallest) {
+      smallest = arg[i];
+      smallestIdx = i;
+    }
+  }
+  return smallestIdx;
+}
+
+//below is a more straight forward version of the above
+function min(arg) {
+  var idx = 0;
+  for(var i = 1; i < arg.length; i++) {
+    if (arg[i] < arg[idx]) {
+      idx = i;
+    }
+  }
+  return idx;
+}
+
+function max(arg) {
+  var idx = 0;
+  for(var i = 1; i < arg.length; i++) {
+    if (arg[i] > arg[idx]) {
+      idx = i;
+    }
+  }
+  return idx;
+}
+
+ console.log("min",min(array));
+ console.log("max",max(array));
+
+</script>
+</html>

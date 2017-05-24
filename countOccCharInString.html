@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+    var longString = "Count how many letters are in this string.";
+    var shortString = "a";
+
+    function countOcc(full,part) {
+      var count = 0;
+      for (var i=0; i < full.length; i++) {
+        if (full.charAt(i) === part) {
+          count++;}
+        }
+        return count;
+      }
+
+      console.log(countOcc(longString,shortString));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<script type="text/javascript" src="test.js">
+
+var start = 1;
+var increment = 3;
+var end = 16;
+
+function sumIncrements(x,y,z) {
+  var total = 0;
+
+  for(var i = x; i <= z; i = i + y) {
+  total = total + i;
+
+  }
+  return total;
+}
+
+console.log(sumIncrements(start,increment,end));
+
+</script>
+</html>

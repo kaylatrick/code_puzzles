@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+      function palindrome(x) {
+        var s = '';
+        var reverse = function(x) {
+           for(var i = x.length; i > 0; i--)
+              s += x.substr(i-1,1);
+            return s;}
+
+        if (x.length === 0 || x.length === 1) {
+          return "true";}
+          else if (x === reverse(x)) {return "true";}
+          else {return "false";}
+
+          }
+
+
+      console.log(palindrome("kayla")); //false
+      console.log(palindrome("racecar")); //true
+      console.log(palindrome("hohoho")); //false
+      console.log(palindrome("hahah")); //true
+
+    </script>
+  </body>
+</html>
